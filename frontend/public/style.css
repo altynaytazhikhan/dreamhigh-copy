@@ -1,0 +1,485 @@
+@font-face {
+  font-family: "TexGyreAdventor";
+  src: url("./fonts/tex-gyre-adventor.woff2") format("woff2");
+}
+
+*{
+    margin: 0 ;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background: white;
+    height: 60px;
+    width: 95%;
+    display: flex; /*GPT*/
+    justify-content: space-between; /* Ensures logo left, button right */
+    padding: 0 20px; /* Adjust spacing */
+    position: relative; /* Needed for absolute positioning of .checkbtn */
+    margin: 10px auto 0 auto; /* change to DH style */
+    border-radius: 50px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(199, 199, 199);
+    z-index: 10;
+    font-family: 'TeX Gyre Adventor', sans-serif !important; 
+    padding-left: 5px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .logo img {
+    height: 50px; 
+    width: auto;
+    max-width: 150px;
+  }
+  
+  .logo-text {
+    font-family: 'TeX Gyre Adventor', sans-serif !important; 
+    font-size: 20px; 
+    font-weight: bold;
+    color: rgb(0, 0, 0); 
+    text-transform: uppercase;
+  }
+  
+  .menu-list{
+    display: flex; /* GPT */
+    align-items: center; /* GPT */
+    z-index: 10; 
+
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+  nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 5px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+  }
+  
+  a.active, a:hover{
+    background: #2C2E83;
+    transition: .5s;
+    color: white;
+  }
+  
+  /* HAMBURGER MENU */
+  
+  .checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none; /* GPT */
+    right: 20px; /* GPT */
+    z-index: 1100; /* Поднять поверх hero */
+  }
+  
+  #check{
+    display: none;
+    
+  }
+  
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-right: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+  }
+  }
+  
+  @media (max-width: 858px){
+  .menu-list{  /* GPT */
+    flex-direction: column; 
+    text-align: center;
+
+  }
+
+  body .menu-list{
+    overflow: hidden;
+  }
+  
+  
+    .checkbtn{
+      display: block;
+    }
+  
+   nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    text-align: center;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+#check:checked ~ .menu-background nav ul {
+  right: 0;
+}
+
+   nav ul li{
+    display: block;
+    margin: 20px 0;
+    line-height: 40px;
+   }
+   nav ul li a{
+    font-size: 20px;
+    color: white;
+  
+   }
+   a:hover, a:active {
+    background: none;
+    color: #2C2E83;
+   }
+   #check:checked ~ .menu-list {
+    right: 0;
+  }
+  }
+ 
+
+section{
+    background: url(bgl.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+
+@font-face {
+    font-family: 'TeX Gyre Adventor';
+    src: url('../fonts/tex-gyre-adventor.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero {
+    width: 100vw; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    border-radius: 0;
+    margin: -70px auto 0 auto; 
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    
+}
+
+.hero-content {
+    font-family: 'Moderustic', sans-serif !important; /* Force the font */
+    position: relative;
+    color: white;
+    z-index: 1
+}
+
+
+
+.hero h1 {
+    font-family: 'Your-Font-Name', sans-serif !important;
+    font-size: 130px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #6465A4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #2C2E83;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        background-position: center;
+        background-size: cover;
+        padding: 20px;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 40px;  /* Smaller font size for mobile */
+    }
+
+    .hero p {
+        font-size: 16px;  
+    }
+}
+/* Возможности */
+
+.borderline{
+  border: 2px solid #ccc;  /* Border for the categories container */
+  border-radius: 10px;  /* Rounded corners */
+  background-color: #f4f4f4; /* Optional: light background */
+  padding: 20px;
+  margin-top: 80px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.categories {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+  justify-content: center;  
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+  transform: translateY(-5px); /* Немного поднимает */
+}
+
+
+.topic{
+  font-size: 20px;
+  margin: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 22px;
+  font-family: 'TeX Gyre Adventor', sans-serif !important; 
+  color: #646571;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  background-color: #28337a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon i{
+  font-size: 80px;
+}
+
+.icon p{
+  color: #fff;
+  font-size: 18px;
+  font-family: 'TeX Gyre Adventor', sans-serif !important; 
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 categories per row */
+    gap: 10px; /* Adjust spacing between items */
+    justify-content: center;
+  }
+
+  .category {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon {
+    width: 140px;
+    height: 140px;
+  }
+
+  .icon i {
+    font-size: 50px;
+  }
+
+  .icon p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories {
+    grid-template-columns: repeat(1, 1fr); /* 1 category per row on very small screens */
+  }
+}
+
+
+.opportunities-theme {
+  margin-left: 250px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'TeX Gyre Adventor', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .opportunities-theme {
+      margin-left: 20px; /* Reduce left margin for small screens */
+      font-size: 18px; /* Decrease font size for better readability */
+      text-align: center; /* Center the text */
+  }
+}
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+  justify-content: flex-start;
+}
+
+.card {
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid #858585;
+  overflow: hidden;
+  text-align: left;
+  padding: 18px 12px;
+
+  cursor: pointer;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.image-wrapper img{
+object-fit: cover;
+}
+
+.image-placeholder {
+  width: 96%;
+  height: 180px;
+  background: #d3d3d3;
+  border-radius: 5px;
+}
+
+.card-content {
+  padding: 14px 10px;
+  font-family: 'TeX Gyre Adventor', sans-serif;
+  line-height: 25px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: hsl(0, 0%, 20%);
+}
+
+hr {
+  border: none;
+  border-top: 3px solid #ddd;
+  margin: 12px 0;
+}
+
+.card-footer {
+  font-size: 14px;
+  color: #666;
+}
+
+.post {
+  text-align: center;
+}
+
+.post button {
+  width: 80%;
+  background-color: #2C2C84; /* Темно-синий цвет фона */
+  color: white; /* Белый текст */
+  border: none;
+  padding: 12px 24px;
+  font-size: 22px;
+  border-radius: 50px; /* Закругленные края */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.post button:hover {
+  background-color: #1F1F66; /* Темно-синий цвет при наведении */
+}

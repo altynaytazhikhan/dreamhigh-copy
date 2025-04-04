@@ -1,0 +1,437 @@
+.menu-background {
+    background-color: #2C2E83; /* Синий цвет фона */
+    padding: 10px 0; /* Пространство сверху и снизу */
+}
+
+
+*{
+    margin: 0 ;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background: white;
+    height: 60px;
+    width: 95%;
+    display: flex; /*GPT*/
+    justify-content: space-between; /* Ensures logo left, button right */
+    padding: 0 20px; /* Adjust spacing */
+    position: relative; /* Needed for absolute positioning of .checkbtn */
+    margin: 10px auto 0 auto; /* change to DH style */
+    border-radius: 50px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(199, 199, 199);
+    z-index: 10;
+    font-family: 'TeX Gyre Adventor', sans-serif !important; 
+    padding-left: 5px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .logo img {
+    height: 50px; 
+    width: auto;
+    max-width: 150px;
+  }
+  
+  .logo-text {
+    font-family: 'TeX Gyre Adventor', sans-serif !important; 
+    font-size: 20px; 
+    font-weight: bold;
+    color: rgb(0, 0, 0); 
+    text-transform: uppercase;
+  }
+  
+  .menu-list{
+    display: flex; /* GPT */
+    align-items: center; /* GPT */
+    z-index: 10; 
+
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+  nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 5px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+  }
+  
+  a.active, a:hover{
+    background: #2C2E83;
+    transition: .5s;
+    color: white;
+  }
+  
+  /* HAMBURGER MENU */
+  
+  .checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none; /* GPT */
+    right: 20px; /* GPT */
+    z-index: 1100; /* Поднять поверх hero */
+  }
+  
+  #check{
+    display: none;
+    
+  }
+  
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-right: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+  }
+  }
+  
+  @media (max-width: 858px){
+  .menu-list{  /* GPT */
+    flex-direction: column; 
+    text-align: center;
+  }
+  
+  
+    .checkbtn{
+      display: block;
+    }
+  
+   nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    right:-100%;
+    text-align: center;
+    transition: all .5s;
+    gap: 10px; /* Reduce space between items */
+  
+   }
+   nav ul li{
+    display: block;
+    margin: 20px 0;
+    line-height: 40px;
+   }
+   nav ul li a{
+    font-size: 20px;
+    color: white;
+  
+   }
+   a:hover, a:active {
+    background: none;
+    color: #2C2E83;
+   }
+   #check:checked ~ .menu-list {
+    right: 0;
+  }
+  }
+ 
+ 
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F3F4F6;
+}
+
+/* Main container styling */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Content box styling */
+.content {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings styling */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1F2937;
+    font-weight: bold;
+}
+
+.container h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #1F2937;
+    font-weight: bold;
+}
+
+/* Paragraph and text styling */
+.content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.content strong {
+    color: #1F2937;
+}
+
+/* Lists styling */
+.content ol {
+    counter-reset: list-counter;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.content ol > li {
+    margin-bottom: 15px;
+    list-style: none;
+    position: relative;
+}
+
+.content ol > li::before {
+    counter-increment: list-counter;
+    content: counter(list-counter) ". ";
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.content li {
+    margin-bottom: 8px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    .content {
+        padding: 20px;
+        border-radius: 0;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    overflow: hidden;
+    display: block !important;
+    flex-wrap: wrap;
+    height: auto !important; /* Auto height instead of fixed */
+    min-height: 200px; /* Reduce min height */
+    position: relative;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Выравниваем контент по верхнему краю */
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100vw;
+    height: auto !important; /* Auto height */
+    background-color: #3d484e;
+    color: white;
+    font-family: 'regular', sans-serif;
+    padding: 20px; /* Reduce padding */
+}
+
+footer h3{
+    color: #fff;
+}
+
+footer section h3 {
+    border-bottom: 1px solid #202020;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.email {
+    border-bottom: 1px solid #202020;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+footer section ul li {
+    border-bottom: 1px solid #202020;
+    padding: 5px 0; /* Reduce spacing */
+}
+
+footer section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Logo Section */
+.footer-logo {
+    display: flex;
+    gap: 1.5rem; /* Reduce gap */
+    align-items: center;
+    padding: 90px;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+}
+
+.footer-dh p{
+    max-width: 200px;
+    line-height: 25px;
+
+}
+
+.footer-dh p, h1{
+    color: #fff;
+}
+
+
+
+/* Footer Content */
+.footer-ul {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between1;
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 20px;
+}
+
+.footer-ul ul{
+    line-height: 40px;
+}
+
+
+.footer-ul div {
+    margin-right: rem;  /* Adds extra space between columns */
+}
+.footer-ul div:last-child {
+    margin-right: 0; /* Ensures last column does not push too far */
+}
+
+
+@media (max-width: 992px) {
+    footer section {
+        flex-direction: column;
+        align-items: flex-start; /* Текст и элементы слева */
+        display: flex;
+        flex: 2;
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        flex-direction: row;
+        align-items:start;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .footer-ul {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start; /* Текст слева */
+        text-align: left;
+        width: 100%;
+    }
+
+    .footer-ul div {
+        width: 100%; /* Чтобы все секции были на всю ширину */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-dh {
+        max-width: 100%;
+        text-align: left; /* Текст слева */
+    }
+
+    .footer-ul {
+        gap: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-ul div{
+        width: 100%;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    footer ul{
+        display: block !important;
+        visibility: visible !important;
+        overflow: visible;
+    }
+
+    footer ul li a {
+        font-size: 16px;
+    }
+
+}

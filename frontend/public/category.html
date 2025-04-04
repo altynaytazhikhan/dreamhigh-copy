@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты возможности</title>
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="menu-container">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <div class="menu-background">
+            <nav>
+                <div class="logo">
+                    <img src="image-web/logo70.png" alt="Dream High Logo">
+                    <span class="logo-text">Dream High</span>
+                </div>
+
+                <ul class="menu-list">         
+                    <li> <a class="active" href="#">Главная</a></li>
+                    <li> <a href="#" data-category="scholarships">Стипендии</a></li>
+                    <li> <a href="#" data-category="conferences">Конференции</a></li>
+                    <li> <a href="#" data-category="competitions">Конкурсы</a></li>
+                    <li> <a href="#" data-category="courses">Онлайн курсы</a></li>
+                    <li> <a href="#" data-category="others">Другие возможности</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="results-image-container">
+        <h2 class="results-heading">Результаты поиска</h2>
+    </div>
+
+
+
+   
+        <h1 id="category-title"></h1>
+    
+    <div class="card-container" id="category-results">
+        <div class="card">
+            <h3 class="card-title">Название</h3>
+        <p class="card-description">Описание</p>
+        <p class="card-deadline">Срок: <span class="deadline-date">Дата</span></p>
+        <a href="#" class="card-link">Подробнее</a>
+        </div>
+    </div>
+
+      
+
+    <script src="category.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+

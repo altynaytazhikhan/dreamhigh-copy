@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'regular';
+    src: url(dream-high-website/fonts/tex-gyre-adventor/texgyreadventor-regular.otf);
+}
+
+/* Footer */
+footer {
+    overflow: hidden;
+    display: block !important;
+    flex-wrap: wrap;
+    height: auto !important; /* Auto height instead of fixed */
+    min-height: 200px; /* Reduce min height */
+    position: relative;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Выравниваем контент по верхнему краю */
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100vw;
+    height: auto !important; /* Auto height */
+    background-color: #3d484e;
+    color: white;
+    font-family: 'regular', sans-serif;
+    padding: 20px; /* Reduce padding */
+}
+
+footer h3{
+    color: #fff;
+}
+
+footer section h3 {
+    border-bottom: 1px solid #202020;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    font-size: 16px;
+
+}
+
+.email {
+    border-bottom: 1px solid #202020;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+
+footer section ul li {
+    border-bottom: 1px solid #202020;
+    padding: 5px 0; /* Reduce spacing */
+}
+
+footer section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Logo Section */
+.footer-logo {
+    display: flex;
+    gap: 1.5rem; /* Reduce gap */
+    align-items: center;
+    padding: 90px;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+}
+
+.footer-dh p {
+    max-width: 200px;
+    line-height: 25px;
+}
+
+.footer-dh p, h1{
+    color: #fff;
+}
+
+/* Footer Content */
+.footer-ul {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between1;
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 20px;
+}
+
+.footer-ul ul{
+    line-height: 40px;
+}
+
+
+.footer-ul div {
+    margin-right: rem;  /* Adds extra space between columns */
+}
+.footer-ul div:last-child {
+    margin-right: 0; /* Ensures last column does not push too far */
+}
+
+.footer-p p{
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    footer section {
+        flex-direction: column;
+        align-items: flex-start; /* Текст и элементы слева */
+        display: flex;
+        flex: 2;
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        flex-direction: row;
+        align-items:start;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .footer-ul {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start; /* Текст слева */
+        text-align: left;
+        width: 100%;
+    }
+
+    .footer-ul div {
+        width: 100%; /* Чтобы все секции были на всю ширину */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-dh {
+        max-width: 100%;
+        text-align: left; /* Текст слева */
+    }
+
+    .footer-ul {
+        gap: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-ul div{
+        width: 100%;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    footer ul{
+        display: block !important;
+        visibility: visible !important;
+        overflow: visible;
+    }
+
+    footer ul li a {
+        font-size: 16px;
+    }
+
+}
+

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream High</title>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic&display=swap" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+
+</head>
+<body>
+    <header>
+       
+        <nav>
+            <div class="logo">
+                <img src="image-web/logo70.png" alt="Dream High Logo">
+                <span class="logo-text">Dream High</span>
+            </div>
+        
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+            </label>
+            
+        <!-- Меню -->
+          
+            <ul class="menu-list">         
+                <li> <a class="active" href="#">Главная</a></li>
+                <li> <a href="category.html?category=scholarships">Стипендии</a></li>
+                <li> <a href="category.html?category=conferences">Конференции</a></li>
+                <li> <a href="category.html?category=competitions">Конкурсы</a></li>
+                <li> <a href="category.html?category=courses">Онлайн-курсы</a></li>
+                <li> <a href="category.html?category=other">Другие возможности</a></li>
+            </ul>
+        </nav>
+        
+        
+    
+ <!-- Хиро секция -->
+
+        <section class="hero"> 
+            <img src="image-web/hero-picture.jpg" alt="Dream High Hero page" class="hero-img">
+            <div class="hero-content">
+                <h1>Dream High</h1>
+                <p>Мечтай высоко, достигай невозможного</p>
+            </div>
+        </section>
+
+    </header>
+
+<!-- Возможности -->
+ <div class="borderline">
+ <div class="topic">
+            <p>Выберите подходящую для вас возможность</p>
+        </div>
+
+    <div class="categories">
+        <div class="category" data-category="scholarships">
+            <div class="icon"> <i class="fas fa-graduation-cap" style='color:#ffffff'></i>
+                <p>Стипендий</p>
+            </div>
+        </div>
+        <div class="category" onclick="goToCategory('competitions')">
+            <div class="icon"> <i class="fas fa-trophy"  style='color:#ffffff'></i>
+                <p>Конкурсы</p>
+            </div>
+            
+        </div>
+        <div class="category" onclick="goToCategory('internships')">
+            <div class="icon"><i class='fas fa-briefcase' style='color:#ffffff'></i> 
+                <p>Стажировки</p>
+            </div>
+        </div>
+        <div class="category" onclick="goToCategory('courses')">
+            <div class="icon"><i class='fas fa-globe' style='color:#ffffff'></i> <p>Онлайн курсы</p>
+            </div>
+           
+        </div>
+        <div class="category" data-category="scholarships">
+           <div class="icon"><i class='fas fa-globe' style='color:#ffffff'></i> <p>Онлайн курсы</p>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<div id="latest-opportunities">
+    <h2 id="results-title"></h2> <!-- Заголовок с названием категории -->
+    <div class="card-container">
+        <!-- Карточки появятся здесь -->
+    </div>
+</div>
+
+<main>
+    <h1>Последние возможности</h1>
+    <div id="latest-opportunities"></div>
+</main>
+
+<h2 class="opportunities-theme">Трендовые возможности</h2>
+
+<div class="card-container" id="search-results">
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Китайская государственная стипендия (CGS) 2025/26 в Пекинском технологическом институте</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Ноябрь 5</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Китайская государственная стипендия (CGS) 2025/26 в Пекинском технологическом институте</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Ноябрь 5</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Китайская государственная стипендия (CGS) 2025/26 в Пекинском технологическом институте</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Ноябрь 5</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Китайская государственная стипендия (CGS) 2025/26 в Пекинском технологическом институте</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Ноябрь 5</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Китайская государственная стипендия (CGS) 2025/26 в Пекинском технологическом институте</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Ноябрь 5</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Китайская государственная стипендия (CGS) 2025/26 в Пекинском технологическом институте</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Ноябрь 5</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="post">
+    <a href="post.html">
+        <button>Опубликуйте свой проект бесплатно</button>
+      </a>      
+</div>
+
+<h2 class="opportunities-theme">Последние возможности</h2>
+
+<div class="card-container" id="search-results  ">
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Программа стипендий Erasmus Mundus 2025/26</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Декабрь 15</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Стажировка в ООН в Нью-Йорке 2025</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Январь 10</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Волонтерская программа в Германии: социальные проекты</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Февраль 1</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Грант на обучение в университете Торонто 2025</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Декабрь 20</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Обменная программа в Южной Корее 2025</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Январь 5</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-wrapper">
+            <div class="image-placeholder"></div>
+        </div>
+        <div class="card-content">
+            <h3>Летняя школа в Лондоне по предпринимательству</h3>
+            <hr>
+            <div class="card-footer">
+                <span>📅 Февраль 10</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Футер -->
+
+  <footer>
+    <section>
+        <div class="footer-logo">
+            <div>
+                <img src="image-web/logo70.png" alt="#">
+            </div>
+            <div class="footer-dh">
+                <h1>Dream High</h1>
+                <p class="footer-p">Мы помогаем мечтам 
+                    становиться реальностью</p>
+                <p>© 2025 Dream High</p>
+            </div>
+        </div>
+
+        <div class="footer-ul">
+            <div>
+                <h3>Разделы сайта</h3>
+                <ul>
+                    <li><a href="#">Стипендии</a></li>
+                    <li><a href="#">Конференции</a></li>
+                    <li><a href="#">Конкурсы</a></li>
+                    <li><a href="#">Онлайн-курсы</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Контакты</h3>
+                <p class="email">Email: your-email@example.com</p>
+                <ul> 
+                    <li><a href="#">Реклама и партнерство</a></li>
+                    <li><a href="#">Публикация вашего поста</a></li>  
+                    <li><a href="#">Поддержите нас </a></li>
+                </ul>
+            </div>
+        
+            <div>
+                <ul>
+                    <h3>Оставайтесь на связи</h3>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Tiktok</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+</footer>
+
+<script src="script.js" defer></script>
+
+    
+</body>
+</html>

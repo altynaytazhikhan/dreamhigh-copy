@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'TexGyreAdventor';
+    src: url('../fonts/tex-gyre-adventor.woff2') format('woff2'),
+         url('../fonts/tex-gyre-adventor.woff') format('woff');
+}
+/* Синий фон за белым контейнером */
+.results-image-container {
+    background-color: #007bff; /* Синий фон */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.results-heading {
+    color: white;
+    font-size: 24px;
+}
+
+/* Поднимаем белый контейнер */
+.card-container {
+    background: white;
+    padding: 20px;
+    margin: -50px auto 20px; /* Поднимаем вверх */
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: -10;
+}
+
+/* Смещение гамбургер-меню левее */
+.checkbtn {
+    position: absolute;
+    right: 10px; /* Сместил левее */
+    top: 15px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+
+.menu-background {
+    background-color: #2C2E83; /* Синий цвет фона */
+    padding: 10px 0; /* Пространство сверху и снизу */
+}
+
+.results-image-container {
+    margin-top: 20px;
+    padding: 20px;
+    padding-left: 60px;
+    position: relative;
+    width: 100%;
+    height: 200px; /* Высота блока */
+    background: url("image-web/hero-picture.jpg") center/cover no-repeat; /* Картинка как фон */
+}
+
+
+
+.results-image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Затемнение */
+}
+
+.results-heading {
+    position: relative;
+    color: white; /* Белый цвет текста */
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    z-index: 1; /* Текст поверх затемнения */
+}
+
+
+/* 📱 Адаптивный дизайн для мобильных устройств */
+@media (max-width: 768px) {
+    .results-image-container {
+        height: 150px; /* Уменьшаем высоту для компактности */
+    }
+
+    .results-heading {
+        font-size: 32px; /* Делаем текст меньше, чтобы влезал */
+        padding: 5px;
+    }
+    .menu-background{
+        height: 90px;
+        
+    }
+   
+}
+
+@media (max-width: 480px) {
+    .results-image-container {
+        height: 120px;
+    }
+
+    .results-heading {
+        font-size: 28px;
+        padding: 5px;
+    }
+}
+
+.filter-section {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 800px;
+}
+
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    max-width: 800px; /* Adjust width */
+    border: 2px solid black;
+    border-radius: 50px;
+    overflow: hidden;
+    background: white;
+    margin: auto;
+}
+
+/* Wrapper for each select */
+.select-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Custom select styling */
+.select-wrapper select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    appearance: none;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+}
+
+/* Custom dropdown arrow (CSS Triangle) */
+.select-wrapper::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    pointer-events: none;
+}
+
+/* Divider between select elements */
+.select-wrapper:first-child {
+    border-right: 2px solid black;
+}
+
+/* Button styles */
+.filter-container button {
+    flex: 0.8;
+    padding: 12px;
+    background: navy;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+}
+
+.filter-container button i {
+    margin-left: 5px;
+}
+
+.filter-container select:focus,
+.filter-container button:focus {
+    outline: none;
+}
+
+
+@media (max-width: 768px) {
+  .filter-container {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center;
+      border-radius: 20px;
+      padding: 15px;
+      max-width: 90%;
+      border: 2px solid black;
+  }
+
+  .select-wrapper {
+      width: 100%;
+      position: relative;
+      margin-bottom: 10px;
+  }
+
+  /* Add boxes around category and country */
+  .select-wrapper select {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      text-align: center;
+      background: #f1f1f1;
+      border: 2px solid black;
+      border-radius: 8px;
+  }
+
+  .filter-container button {
+      width: 100%;
+      border-radius: 12px;
+  }
+}
